@@ -1,0 +1,21 @@
+
+
+
+##Linorx Join Messages Configuration##
+
+
+#Enter the Name of your Server that would be Displayed in the Join Message here:
+ServerName:
+
+
+
+
+
+
+
+#################WILL BE ADDED IN THE FUTURE################
+#Set youre Join Message:
+MessageOnJoin:
+
+#Set youre Quit Message:
+MessageOnQuit:

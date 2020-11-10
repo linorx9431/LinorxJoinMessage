@@ -1,0 +1,5 @@
+main: linorx\JoinMessage\main
+name: LinorxJM
+version: 1.0-SNAPSHOT
+api: 3.15
+author: Linorx
