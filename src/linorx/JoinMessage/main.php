@@ -30,22 +30,27 @@ class main extends PluginBase implements Listener
     public function onJoin(PlayerJoinEvent $event) {
         $player = $event->getPlayer();
         $name = $event->getPlayer()->getName();
-        $servername = $this->getConfig()->get("ServerName");
+        $join = $this->getConfig()->get("MessageOnJoin");
+        $joinOP = $this->getConfig()->get("MessageOnJoinOP");
+        $messageOP = $this->getConfig()->get("JoinMessageOP");
+        $message = $this->getConfig()->get("JoinMessage");
         if ($player->isOp()) {
-            $event->setJoinMessage(TextFormat::RED. $name .TextFormat::AQUA. " hat das Spiel betreten.");
-            $player->sendMessage(TextFormat::AQUA.TextFormat::ITALIC."Wilkommen auf ".$servername." ".TextFormat::RED. $name);
+            $event->setJoinMessage(TextFormat::RED. $name .TextFormat::AQUA.$joinOP);
+            $player->sendMessage(TextFormat::AQUA.TextFormat::ITALIC.$messageOP.TextFormat::GOLD.$name);
         } else {
-            $event->setJoinMessage(TextFormat::YELLOW. $name .TextFormat::AQUA. " hat das Spiel betreten.");
-            $player->sendMessage(TextFormat::BLUE."Wilkommen auf ".$servername." ".TextFormat::RED. $name);
+            $event->setJoinMessage(TextFormat::YELLOW. $name .TextFormat::AQUA.$join);
+            $player->sendMessage(TextFormat::BLUE.$message.TextFormat::YELLOW.$name);
         }
     }
     public function onQuit(PlayerQuitEvent $event) {
         $player = $event->getPlayer();
         $name = $event->getPlayer()->getName();
+        $quit = $this->getConfig()->get("MessageOnQuit");
+        $quitOP = $this->getConfig()->get("MessageOnQuitOP");
         if ($player->isOp()) {
-            $event->setQuitMessage(TextFormat::RED. $name .TextFormat::AQUA. " hat das Spiel verlassen");
+            $event->setQuitMessage(TextFormat::RED. $name .TextFormat::AQUA.$quitOP);
         } else {
-            $event->setQuitMessage(TextFormat::YELLOW. $name .TextFormat::AQUA. " hat das Spiel verlassen.");
+            $event->setQuitMessage(TextFormat::YELLOW. $name .TextFormat::AQUA.$quit);
         }
     }
 }

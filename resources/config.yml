@@ -5,17 +5,19 @@
 
 
 #Enter the Name of your Server that would be Displayed in the Join Message here:
-ServerName:
+ServerName: EliteGaming
 
 
+#Set youre Join Message for OP Players:
+MessageOnJoinOP: has joined the EliteGaming Servers as OP
+#Send an OP a Join Message:
+JoinMessageOP: Wilkommen auf den $servername Servern
+#Set your Join Message for Normal Players:
+MessageOnJoin: has joined the EliteGaming Servers
+#Send a Player a Join Message:
+JoinMessage: Wilkommen auf den $servername Servern
 
-
-
-
-
-#################WILL BE ADDED IN THE FUTURE################
-#Set youre Join Message:
-MessageOnJoin:
-
-#Set youre Quit Message:
-MessageOnQuit:
+#Set youre Quit Message for OP Players:
+MessageOnQuitOP: has left the EliteGaming Servers
+#Set your QuitMessage for Normal Players:
+MessageOnQuit: has left the EliteGaming Servers
